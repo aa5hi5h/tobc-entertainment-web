@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 213 60% 99%;
+    --foreground: 210 8% 5%;
+
+    --card: 213 60% 99%;
+    --card-foreground: 210 8% 5%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 8% 5%;
+
+    --primary: 357 100% 70%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 180 7% 94%;
+    --secondary-foreground: 210 8% 5%;
+
+    --muted: 180 7% 94%;
+    --muted-foreground: 189 6% 45%;
+
+    --accent: 359 98% 47%;
+    --accent-foreground: 210 8% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 180 6% 90%;
+    --input: 192 6% 83%;
+    --ring: 190 24% 75%;
+
+    --radius: 0.5rem;
+
+    --swiper-pagination-color: hsl(var(--primary));
+    --swiper-navigation-color: hsl(var(--primary));
+  }
+
+  .dark {
+    --background: 356 96% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 356 96% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 356 96% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 357 100% 70%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 180 2% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 180 2% 18%;
+    --muted-foreground: 180 2% 49%;
+
+    --accent: 359 98% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 357 50% 20%;
+    --input: 359 2% 18%;
+    --ring: 359 88% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-accent/40 selection:text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
+.swiper-pagination-bullet .swiper-pagination-bullet-active {
+  @apply !bg-primary text-primary-foreground;
+}
