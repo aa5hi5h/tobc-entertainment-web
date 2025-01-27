@@ -40,13 +40,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
             attribute="class"
             defaultTheme="light"
           >
-            <div className="relative flex min-h-screen flex-col bg-slate-200">
+            <div className="relative flex min-h-screen flex-col bg-zinc-300">
               <ZyfloNavbar 
                 items={siteConfig.mainNav}
-                className="bg-slate-200 border-b border-slate-300"
+                className="bg-zinc-400 border-b border-slate-400"
               />
               <div className="flex-1">{children}</div>
-              <SiteFooter className="bg-slate-200 border-t border-slate-300" />
+              <SiteFooter className="bg-zinc-400 border-t border-slate-500" />
               <Toaster />
             </div>
             <TailwindIndicator />
