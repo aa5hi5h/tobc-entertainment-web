@@ -290,10 +290,8 @@ export default function ZyfloNavbar({
     >
       <Link href="/" className="w-full h-auto select-none max-w-[150px]">
         <img
-          src={"/logo-wide.png"}
+          src={"/logo-wide.jpg"}
           alt={"TOBC Entertainment"}
-          width={300}
-          height={100}
           className={"w-full h-full"}
         />
       </Link>

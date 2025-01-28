@@ -21,7 +21,7 @@ export default function SiteFooter({ className, ...props }: SiteFooterProps) {
             <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
               <Image
                 className="h-14 w-auto mb-8 "
-                src="/logo-wide.png"
+                src="/logo-wide.jpg"
                 alt="TOBC Entertainment Logo"
                 width={300}
                 height={108}

@@ -38,6 +38,7 @@ import {
 } from "./ui/accordion"
 import { Button } from "./ui/button"
 import NumberTicker from "./ui/number-ticker"
+import { HorizontalScrollBar } from "./scrollbar/main"
 
 function AppleIcon({ ...props }) {
   return (
@@ -125,9 +126,10 @@ export default function LandingPage() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="tracking-normal uppercase text-balance text-center lg:text-5xl md:text-4xl text-3xl font-medium text-foreground"
           >
-            Match Your <span className="font-extrabold">Brand</span> With The
+            Match Your <span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-red-500
+            to-rose-600 bg-opacity-50">Brand</span> With The
             <br />{" "}
-            <span className="font-extrabold">
+            <span className="font-extrabold ">
               Perfect Celebrities and Influencers
             </span>
           </motion.h1>
@@ -328,7 +330,12 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
             className="tracking-normal uppercase text-center lg:text-5xl md:text-4xl text-3xl font-medium"
           >
-            Our <span className="font-extrabold">Clients</span>
+            Our <span className="font-extrabold text-gradient
+            bg-gradient-to-r
+            from-red-500
+            to-rose-600
+            bg-clip-text
+            text-transparent">Clients</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -532,7 +539,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
             className="tracking-normal uppercase text-center lg:text-5xl md:text-4xl text-3xl font-medium"
           >
-            The <span className="font-extrabold">Trust We Earn</span>
+            The <span className="font-extrabold ">Trust We Earn</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -794,6 +801,10 @@ export default function LandingPage() {
           </div>
         </div>
       </motion.section>
+
+      <section className="py-12">
+      <HorizontalScrollBar />
+      </section>
 
       <motion.section
         initial={{ opacity: 0, y: 20 }}
