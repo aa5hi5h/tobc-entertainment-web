@@ -39,6 +39,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Phone } from "lucide-react"
+import { Mail } from "lucide-react"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -111,8 +113,27 @@ export default function ContactUsPage() {
           </h1>
         </div>
 
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Get in touch!</h2>
+          
+          {/* New Contact Information Section */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
+              <div className="flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5" />
+                <a href="tel:+918077552630" className="hover:text-accent">
+                  Call us at: +91 80775 52630
+                </a>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Mail className="w-5 h-5" />
+                <a href="mailto:info@tobcentertainment.com" className="hover:text-accent">
+                  Email: info@tobcentertainment.com
+                </a>
+              </div>
+            </div>
+          </div>
+
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -173,10 +194,10 @@ export default function ContactUsPage() {
                 ></div>
                 <Button
                   type="submit"
-                  size={"sm"}
+                  size="sm"
                   disabled={isSubmitting}
                   className="border-accent/20 text-sm w-full hover:bg-accent/10 h-11"
-                  variant={"outline"}
+                  variant="outline"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -189,16 +210,16 @@ export default function ContactUsPage() {
               Connect with social media
             </h3>
             <div className="flex justify-center space-x-4">
-              <Link href="#" className="text-foreground hover:text-opacity-80">
+              <Link href="https://www.facebook.com/TOBCEntertainment" className="text-foreground hover:text-opacity-80">
                 <Facebook />
               </Link>
-              <Link href="#" className="text-foreground hover:text-opacity-80">
+              <Link href="https://www.instagram.com/tobcentertainment" className="text-foreground hover:text-opacity-80">
                 <Instagram />
               </Link>
-              <Link href="#" className="text-foreground hover:text-opacity-80">
+              <Link href="https://www.twitter.com/CreativesOfTOBC" className="text-foreground hover:text-opacity-80">
                 <Twitter />
               </Link>
-              <Link href="#" className="text-foreground hover:text-opacity-80">
+              <Link href="https://www.youtube.com/@tobcmusic" className="text-foreground hover:text-opacity-80">
                 <Youtube />
               </Link>
             </div>
