@@ -56,7 +56,7 @@ const formSchema = z.object({
   }),
   instagramLink: z.string().url().optional(),
   extraActivities: z.array(
-    z.enum(["Dance", "Singing", "Badminton", "Gymnastics", "Modeling"])
+    z.enum(["Dance", "Singing", "Badminton", "Gymnastics", "Modeling","Theatre - NSD & FTII","Athletics","Anchoring","Dubbing","Mimicry","Martial Arts","Driving 4 wheeler","Skateboarding","Yoga"])
   ),
 })
 
@@ -440,6 +440,16 @@ export default function CastingPage() {
                           "Badminton",
                           "Gymnastics",
                           "Modeling",
+                          "Theatre - NSD & FTII",
+                          "Athletics",
+                          "Anchoring",
+                          "Dubbing",
+                          "Mimicry",
+                          "Martial Arts",
+                          "Driving 4 wheeler",
+                          "Skateboarding",
+                          "Yoga",
+
                         ].map((activity) => (
                           <FormItem
                             key={activity}
@@ -454,6 +464,15 @@ export default function CastingPage() {
                                     | "Badminton"
                                     | "Gymnastics"
                                     | "Modeling"
+                                    |"Theatre - NSD & FTII"
+                                    |"Athletics"
+                                    |"Anchoring"
+                                    |"Dubbing"
+                                    |"Mimicry"
+                                    |"Martial Arts"
+                                    |"Driving 4 wheeler"
+                                    |"Skateboarding"
+                                    |"Yoga"
                                 )}
                                 onCheckedChange={(checked: any) => {
                                   const updatedValue = checked

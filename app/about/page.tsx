@@ -71,7 +71,7 @@ export default function AboutUsPage() {
                 className="md:w-1/3"
               >
                 <Image
-                  src="/logo.jpg"
+                  src="/tobc-new-about.jpg"
                   alt="TOBC Entertainment"
                   width={400}
                   height={300}
@@ -103,10 +103,7 @@ export default function AboutUsPage() {
                   About The Director
                 </h2>
                 <p className="mb-4">
-                  Shivam Singh is a film producer who founded TOBC Entertainment
-                  in 2023 to empower and promote new ideas and talent in the
-                  entertainment industry while exploring his own style of
-                  filmmaking.
+                Shivam Singh is a film producer who founded TOBC Entertainment in 2023 to empower and promote new ideas and talent in the entertainment industry while exploring his own style of filmmaking.
                 </p>
                 <p className="mb-4">
                   At TOBC Entertainment, Shivam is committed to discovering and
@@ -130,7 +127,7 @@ export default function AboutUsPage() {
                 className="md:w-1/3"
               >
                 <Image
-                  src="/logo.jpg"
+                  src="/tobc-new-about-2.jpg"
                   alt="Shivam Singh"
                   width={400}
                   height={300}

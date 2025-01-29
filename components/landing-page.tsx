@@ -96,69 +96,103 @@ export default function LandingPage() {
 
   return (
     <div className="w-full text-foreground">
-      {/* Perfect influencer and celebrity Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="flex lg:flex-col flex-col lg:gap-16 gap-12 items-center justify-center  px-8 md:py-52 py-24 relativ w-fulle relative overflow-hidden"
+        className="relative h-screen w-full flex items-center justify-center overflow-hidden"
       >
-        <div className="w-full h-full absolute top-0 left-0 inset-0 z-[-1]">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-background to-70%"></div>
-          <img
-            src={"https://www.euruni.edu/blog/wp-content/uploads/Cinema-8.jpg"}
-            alt="background"
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex flex-col items-center justify-center"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="tracking-normal uppercase text-balance text-center lg:text-5xl md:text-4xl text-3xl font-medium text-foreground"
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 bg-black/40 z-10" /> {/* Overlay */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
           >
-            Match Your <span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-red-500
-            to-rose-600 bg-opacity-50">Brand</span> With The
-            <br />{" "}
-            <span className="font-extrabold ">
-              Perfect Celebrities and Influencers
-            </span>
-          </motion.h1>
-          <motion.p
+            <source 
+              src="/tobc-landing-page-video.mp4" 
+              type="video/mp4" 
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-20 container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="mt-6 text-foreground max-w-xl mx-auto text-center lg:text-lg md:text-base text-sm"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="flex flex-col items-center justify-center text-white"
           >
-            Amplify your reach, and drive engagement with our influencer and
-            celebrity marketing services
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-          >
-            <Button
-              size={"sm"}
-              asChild
-              className=" rounded-full bg-[size:300%_300%] bg-[position:0%_0%] hover:bg-[position:100%_100%] transition-all duration-500 ease-in-out object-center bg-gradient-to-r from-accent via-primary to-accent lg:text-base text-sm h-12 px-8 bg-primary text-white font-bold shadow-[0px_6px_40px_hsl(var(--accent)/0.3)] mt-8 capitalize"
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="tracking-normal uppercase text-balance text-center lg:text-6xl md:text-5xl text-4xl font-medium"
             >
-              <Link href={"/contact-us"}>Connect with us today!</Link>
-            </Button>
+              Match Your{" "}
+              <span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-rose-600">
+                Brand
+              </span>{" "}
+              With The
+              <br />
+              <span className="font-extrabold">
+                Perfect Celebrities and Influencers
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mt-6 max-w-xl mx-auto text-center lg:text-xl md:text-lg text-base"
+            >
+              Amplify your reach, and drive engagement with our influencer and
+              celebrity marketing services
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <Button
+                size="lg"
+                asChild
+                className="rounded-full bg-[size:300%_300%] bg-[position:0%_0%] hover:bg-[position:100%_100%] transition-all duration-500 ease-in-out object-center bg-gradient-to-r from-accent via-primary to-accent lg:text-lg text-base h-14 px-10 bg-primary text-white font-bold shadow-[0px_6px_40px_hsl(var(--accent)/0.3)] mt-8 capitalize"
+              >
+                <Link href="/contact-us">Connect with us today!</Link>
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+            className="w-6 h-10 border-2 border-white rounded-full p-1"
+          >
+            <div className="w-1 h-2 bg-white rounded-full mx-auto" />
+          </motion.div>
+        </div>
       </motion.section>
+
       {/* Our Story Section */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -167,102 +201,7 @@ export default function LandingPage() {
         transition={{ duration: 0.6 }}
         className="px-8 pb-24 relative"
       >
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]"
-        >
-          <div className="flex-row sm:inline-flex gap-16 hidden -mt-16 overflow-visible pb-8 animate-slide-left w-full">
-            {celebreties.map((celeb, i) => (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className={`inline ${
-                  i % 2 === 0 ? (i % 3 === 0 ? "mt-48" : "mt-40") : "mt-16"
-                }`}
-              >
-                <Image
-                  draggable={false}
-                  src={celeb.imageSrc}
-                  alt="influencer and celebrity"
-                  className="min-h-56 rounded-lg object-cover min-w-48 aspect-[3/4] "
-                  width="187"
-                  height="250"
-                />
-                <div className="flex flex-row justify-start gap-2 mt-4">
-                  <Image
-                    draggable={false}
-                    src={celeb.imageSrc}
-                    alt="influencer and celebrity"
-                    className="rounded-full h-fit flex-1 aspect-square object-cover max-w-[40px]"
-                    width="40"
-                    height="40"
-                  />
-                  <div className="flex w-fit flex-col justify-start gap-2">
-                    <h3 className="text-sm font-semibold">{celeb.name}</h3>
-                    <p className="text-sm -mt-2">{celeb.tag}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        {screenSize === "sm" && (
-          <Swiper
-            modules={[Navigation, Pagination, A11y, Autoplay]}
-            spaceBetween={50}
-            loop={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: true,
-            }}
-            allowTouchMove={true}
-            effect="cretive"
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true, bulletClass: "text-primary" }}
-            centeredSlides={true}
-            className="overflow-visible"
-          >
-            {celebreties.map((celeb, i) => (
-              <SwiperSlide className="overflow-visible">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="overflow-visible grid shadow-xl shadow-foreground/5 items-start bg-accent/[0.01] rounded-xl justify-center flex-col lg:p-8 p-6 h-full"
-                >
-                  <div className="grid gap-3 lg:gap-5">
-                    <div className="flex flex-col justify-center gap-4 items-center space-x-3">
-                      <div className="">
-                        <Image
-                          draggable={false}
-                          src={celeb.imageSrc}
-                          alt="Profile"
-                          className="object-cover w-full h-full aspect-[374/500] rounded-lg"
-                          width="374"
-                          height="500"
-                        />
-                      </div>
-                      <div className="text-xl font-bold tracking-normal text-center">
-                        <div>{celeb.name}</div>
-                        <div className="text-sm -mt-0.5 text-foreground/60 font-medium">
-                          {celeb.tag}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
+        
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -522,6 +461,10 @@ export default function LandingPage() {
           </AnimatePresence>
         </div>
       </motion.section>
+
+      <section className="py-12">
+      <HorizontalScrollBar />
+      </section>
 
       {/* The Trust We Earn Section */}
       <motion.section
@@ -802,106 +745,9 @@ export default function LandingPage() {
         </div>
       </motion.section>
 
-      <section className="py-12">
-      <HorizontalScrollBar />
-      </section>
+     
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="px-8 py-24 relative"
-      >
-        <div className="relative size-full max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="tracking-normal uppercase text-center lg:text-5xl md:text-4xl text-3xl font-extrabold"
-          >
-            <span className="font-medium">Frequently </span>Asked Questions
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mt-4 text-center lg:text-lg md:text-base text-sm text-foreground/80"
-          >
-            Frequently asked questions about our influencer and celebrity
-            marketing services.
-            <br />
-            If you have any questions, feel free to contact us.
-          </motion.p>
-          <Accordion
-            type="single"
-            collapsible
-            className="max-w-3xl mx-auto flex flex-col gap-4 mt-8"
-          >
-            <AccordionItem
-              className=" backdrop-blur-sm shadow-lg shadow-foreground/[0.02] rounded-xl py-2 px-8"
-              value="item-1"
-            >
-              <AccordionTrigger className="text-left">
-                What Types of Influencers Do You Work With?
-              </AccordionTrigger>
-              <AccordionContent>
-                Content regarding the types of influencers the agency works
-                with.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem
-              className=" backdrop-blur-sm shadow-lg shadow-foreground/[0.02] rounded-xl py-2 px-8"
-              value="item-2"
-            >
-              <AccordionTrigger className="text-left">
-                How does our agency select influencers?
-              </AccordionTrigger>
-              <AccordionContent>
-                Content explaining how the agency selects influencers.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem
-              className=" backdrop-blur-sm shadow-lg shadow-foreground/[0.02] rounded-xl py-2 px-8"
-              value="item-3"
-            >
-              <AccordionTrigger className="text-left">
-                Can I choose the influencers I want to work with?
-              </AccordionTrigger>
-              <AccordionContent>
-                Content about choosing influencers.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem
-              className=" backdrop-blur-sm shadow-lg shadow-foreground/[0.02] rounded-xl py-2 px-8"
-              value="item-4"
-            >
-              <AccordionTrigger className="text-left">
-                How much does an influencer and celebrity marketing campaign
-                cost?
-              </AccordionTrigger>
-              <AccordionContent>
-                Content discussing the cost of an influencer and celebrity
-                marketing campaign.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem
-              className=" backdrop-blur-sm shadow-lg shadow-foreground/[0.02] rounded-xl py-2 px-8"
-              value="item-5"
-            >
-              <AccordionTrigger className="text-left">
-                How do you ensure the content aligns with our brand?
-              </AccordionTrigger>
-              <AccordionContent>
-                Content explaining how the agency ensures content alignment with
-                the brand.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </motion.section>
+      
 
       <motion.section
         initial={{ opacity: 0, y: 20 }}
