@@ -65,37 +65,6 @@ export default function WorkPage() {
           </AnimatePresence>
         </div>
       </section>
-
-      {/* Individual Sections */}
-      <section id="advertisement" className="py-24 bg-background">
-        <div className="container px-4 mx-auto">
-          <SectionHeader
-            title="Advertisement"
-            description="Creating compelling visual stories that captivate and convert."
-          />
-          <AdvertisementContent />
-        </div>
-      </section>
-
-      <section id="music" className="py-24 bg-accent/[0.03]">
-        <div className="container px-4 mx-auto">
-          <SectionHeader
-            title="Music"
-            description="Producing chart-topping hits and discovering new talent."
-          />
-          <MusicContent />
-        </div>
-      </section>
-
-      <section id="films" className="py-24 bg-background">
-        <div className="container px-4 mx-auto">
-          <SectionHeader
-            title="Films"
-            description="Crafting cinematic experiences that leave lasting impressions."
-          />
-          <FilmsContent />
-        </div>
-      </section>
     </main>
   )
 }

@@ -170,10 +170,7 @@ export default function AdvertisementContent() {
           transition={{ delay: index * 0.2 }}
         >
           <Link
-            href={ad.vimeoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group"
+            href={`/work/advertisements/${ad.id}`}
           >
             <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl">
               <CardHeader className="p-0">

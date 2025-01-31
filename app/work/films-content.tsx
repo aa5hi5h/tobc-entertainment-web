@@ -2,8 +2,6 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-
-import { filmProjects } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -12,6 +10,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
+export const filmProjects = [
+  {
+    id: "film-1",
+    title: "Dilema",
+    synopsis: "Discover our collection of films, from thrilling dramas to heartwarming comedies.",
+    poster: "/tobc-films-1.jpg",
+    details: {
+      cast: "Rohan Mehra & Pragya Kodile",
+      director: "Preet Singh Bhullar",
+      producer: "Shivam Singh"
+    }
+  },
+  {
+    id: "film-2", 
+    title: "Lehenga",
+    synopsis: "A compelling narrative exploring human emotions",
+    poster: "/tobc-films-2.jpg", 
+    details: {
+      cast: "Jameel Khan",
+      director: "Piyush Priyank", 
+      coProducer: "Shivam Singh (TOBC)"
+    }
+  }
+]
 
 export default function FilmsContent() {
   return (
@@ -24,7 +47,7 @@ export default function FilmsContent() {
           viewport={{ once: true }}
           transition={{ delay: index * 0.2 }}
         >
-          <Link key={film.id} href={`/work/films/${film.id}`} className="group">
+          <Link href={`/work/films/${film.id}`} className="group">
             <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl">
               <CardHeader className="p-0">
                 <div className="relative aspect-[16/9] overflow-hidden">

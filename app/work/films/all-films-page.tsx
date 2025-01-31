@@ -3,11 +3,10 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, Film, Star } from "lucide-react"
-
-import { filmProjects } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
 import FilmCard from "./film-card"
+import FilmsContent from "../films-content"
 
 export default function AllFilmsPage() {
   return (
@@ -76,19 +75,7 @@ export default function AllFilmsPage() {
         </motion.div>
 
         {/* Films Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filmProjects.map((film, index) => (
-            <motion.div
-              key={film.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <FilmCard film={film} />
-            </motion.div>
-          ))}
-        </div>
+        <FilmsContent />
       </div>
     </main>
   )
