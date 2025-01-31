@@ -13,7 +13,7 @@ interface PageProps {
 
 
 
-export const filmProjects = [
+const filmProjects = [
   {
     id: "film-1",
     title: "Dilema",
