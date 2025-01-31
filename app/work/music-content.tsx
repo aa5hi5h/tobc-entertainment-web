@@ -13,33 +13,7 @@ import {
 } from "@/components/ui/card"
 
 export const musicProjects = [
-  {
-    id: "track-1",
-    title: "Tum Subah",
-    artist: "Mohd Danish, Sarodee Borah",
-    genre: "Electronic",
-    youtubeId: "PaAJeXtT1Hw",
-    youtubeUrl: "https://youtu.be/PaAJeXtT1Hw",
-    coverArt: `https://img.youtube.com/vi/PaAJeXtT1Hw/maxresdefault.jpg`
-  },
-  {
-    id: "track-2",
-    title: "Laut Maa Aao",
-    artist: "Anong Singpho & Oupseng Namchoom",
-    genre: "Emotional",
-    youtubeId: "zffBlrbRJVo",
-    youtubeUrl: "https://youtu.be/zffBlrbRJVo",
-    coverArt: `https://img.youtube.com/vi/zffBlrbRJVo/maxresdefault.jpg`
-  },
-  {
-    id: "track-3",
-    title: "Tum Mere Pass",
-    artist: " Mohammed Irfan",
-    genre: "Ambient",
-    youtubeId: "4L_Ur3bVBF0",
-    youtubeUrl: "https://youtu.be/4L_Ur3bVBF0",
-    coverArt: `https://img.youtube.com/vi/4L_Ur3bVBF0/maxresdefault.jpg`
-  },
+
   {
     id: "track-4",
     title: "Ab Kise Barbaad Karoge",
@@ -48,15 +22,6 @@ export const musicProjects = [
     youtubeId: "xhgm6F9Q0xU",
     youtubeUrl: "https://youtu.be/xhgm6F9Q0xU",
     coverArt: `https://img.youtube.com/vi/xhgm6F9Q0xU/maxresdefault.jpg`
-  },
-  {
-    id: "track-5",
-    title: "Sunne Sunne",
-    artist: "Dolly Khan",
-    genre: "Synthwave",
-    youtubeId: "Jofkkn_VU8c",
-    youtubeUrl: "https://youtu.be/Jofkkn_VU8c",
-    coverArt: `https://img.youtube.com/vi/Jofkkn_VU8c/maxresdefault.jpg`
   },
   {
     id: "track-6",
@@ -76,15 +41,7 @@ export const musicProjects = [
     youtubeUrl: "https://youtu.be/rS0_xQXwqC0",
     coverArt: `https://img.youtube.com/vi/rS0_xQXwqC0/maxresdefault.jpg`
   },
-  {
-    id: "track-8",
-    title: "Careless ",
-    artist: "Vishu Arik ",
-    genre: "Electronic Pop",
-    youtubeId: "Y_qG_8Ssv-k",
-    youtubeUrl: "https://youtu.be/Y_qG_8Ssv-k",
-    coverArt: `https://img.youtube.com/vi/Y_qG_8Ssv-k/maxresdefault.jpg`
-  },
+  
   {
     id: "track-9",
     title: "TUJHI PE MERA HAQ HAI",
@@ -102,42 +59,6 @@ export const musicProjects = [
     youtubeId: "YcvbOWOnpP0",
     youtubeUrl: "https://youtu.be/YcvbOWOnpP0",
     coverArt: `https://img.youtube.com/vi/YcvbOWOnpP0/maxresdefault.jpg`
-  },
-  {
-    id: "track-11",
-    title: "TU MERE DIL ME RAHNE KE LAYAK NAHI",
-    artist: "Altamash Faridi ",
-    genre: "Synthpop",
-    youtubeId: "KmILhw-1ztc",
-    youtubeUrl: "https://youtu.be/KmILhw-1ztc",
-    coverArt: `https://img.youtube.com/vi/KmILhw-1ztc/maxresdefault.jpg`
-  },
-  {
-    id: "track-12",
-    title: "Sang Tum Rehna",
-    artist: "Alka Yagnik, Ashok Ojha",
-    genre: "Ambient",
-    youtubeId: "BGM3FDI1fHY",
-    youtubeUrl: "https://youtu.be/BGM3FDI1fHY",
-    coverArt: `https://img.youtube.com/vi/BGM3FDI1fHY/maxresdefault.jpg`
-  },
-  {
-    id: "track-13",
-    title: "Dooriyan",
-    artist: "P-ush",
-    genre: "Chillwave",
-    youtubeId: "7xXUjQy36KQ",
-    youtubeUrl: "https://youtu.be/7xXUjQy36KQ",
-    coverArt: `https://img.youtube.com/vi/7xXUjQy36KQ/maxresdefault.jpg`
-  },
-  {
-    id: "track-14",
-    title: "Ohh Jaaniye",
-    artist: "Anong Singpho",
-    genre: "Electronic",
-    youtubeId: "IcBSljhfIDM",
-    youtubeUrl: "https://youtu.be/IcBSljhfIDM",
-    coverArt: `https://img.youtube.com/vi/IcBSljhfIDM/maxresdefault.jpg`
   },
   {
     id: "track-15",

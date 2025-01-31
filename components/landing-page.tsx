@@ -39,6 +39,8 @@ import {
 import { Button } from "./ui/button"
 import NumberTicker from "./ui/number-ticker"
 import { HorizontalScrollBar } from "./scrollbar/main"
+import { Router } from "next/router"
+import { useRouter } from "next/navigation"
 
 function AppleIcon({ ...props }) {
   return (
@@ -93,6 +95,8 @@ export default function LandingPage() {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
   }
+
+  const router = useRouter()
 
   return (
     <div className="w-full text-foreground">
@@ -784,6 +788,7 @@ export default function LandingPage() {
             className="flex justify-center"
           >
             <Button
+            onClick={() => router.push("/contact-us")}
               variant={"secondary"}
               size={"lg"}
               className="mt-8 text-xl bg-foreground hover:bg-foreground/95 rounded-full h-14 px-10 text-background mx-auto"

@@ -27,7 +27,7 @@ export const filmProjects = [
     id: "film-2", 
     title: "Lehenga",
     synopsis: "A compelling narrative exploring human emotions",
-    poster: "/tobc-films-2.jpg", 
+    poster: "/tobc-films-3.png", 
     details: {
       cast: "Jameel Khan",
       director: "Piyush Priyank", 
