@@ -21,8 +21,13 @@ const nextConfig = {
         hostname: "utfs.io",
         pathname: `/f/${process.env.NEXT_PUBLIC_UPLOADTHING_APP_ID}/*`,
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+        pathname: "/vi/**",
+      }
     ],
-    domains: ["https://utfs.io", "utfs.io"],
+    domains: ["utfs.io", "img.youtube.com"],
   },
 }
 
