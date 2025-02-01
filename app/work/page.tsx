@@ -10,6 +10,7 @@ import FilmsContent from "./films-content"
 import MusicContent from "./music-content"
 import SectionHeader from "./section-header"
 import { tabs } from "./tabs"
+import FullAdvertisementContent from "./advertisement-content"
 
 export default function WorkPage() {
   const [activeTab, setActiveTab] = useState("advertisement")
@@ -58,7 +59,7 @@ export default function WorkPage() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
             >
-              {activeTab === "advertisement" && <AdvertisementContent />}
+              {activeTab === "advertisement" && <FullAdvertisementContent />}
               {activeTab === "music" && <MusicContent />}
               {activeTab === "films" && <FilmsContent />}
             </motion.div>

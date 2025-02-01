@@ -15,6 +15,15 @@ import {
 export const musicProjects = [
 
   {
+    id: "track-10",
+    title: "MUSKURANA TERA",
+    artist: "Saaj Bhatt",
+    genre: "Dark Ambient",
+    youtubeId: "YcvbOWOnpP0",
+    youtubeUrl: "https://youtu.be/YcvbOWOnpP0",
+    coverArt: `https://img.youtube.com/vi/YcvbOWOnpP0/maxresdefault.jpg`
+  },
+  {
     id: "track-4",
     title: "Ab Kise Barbaad Karoge",
     artist: "Altamash Faridi ",
@@ -50,15 +59,6 @@ export const musicProjects = [
     youtubeId: "B5h-fTV0m3A",
     youtubeUrl: "https://youtu.be/B5h-fTV0m3A",
     coverArt: `https://img.youtube.com/vi/B5h-fTV0m3A/maxresdefault.jpg`
-  },
-  {
-    id: "track-10",
-    title: "MUSKURANA TERA",
-    artist: "Saaj Bhatt",
-    genre: "Dark Ambient",
-    youtubeId: "YcvbOWOnpP0",
-    youtubeUrl: "https://youtu.be/YcvbOWOnpP0",
-    coverArt: `https://img.youtube.com/vi/YcvbOWOnpP0/maxresdefault.jpg`
   },
   {
     id: "track-15",
